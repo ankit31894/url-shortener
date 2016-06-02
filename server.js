@@ -27,7 +27,7 @@ app.get("/new/*", function(request, response,next) {
             "url":url,
         }
 
-        var mongo_url = 'mongodb://localhost:27017/my_database_name';      
+        var mongo_url = process.env.MONGOLAB_URI;      
         //(Focus on This Variable)
 
         // Use connect method to connect to the Server
@@ -66,7 +66,7 @@ app.get("/new/*", function(request, response,next) {
 app.get("/:number", function(request, response,next) {
 
     
-    var mongo_url = 'mongodb://localhost:27017/my_database_name';      
+    var mongo_url = process.env.MONGOLAB_URI;      
     //(Focus on This Variable)
 
     // Use connect method to connect to the Server
